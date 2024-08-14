@@ -43,8 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandMode\Command.cs" />
+    <Compile Include="CommandMode\ConcreteCommand.cs" />
+    <Compile Include="CommandMode\Invoker.cs" />
+    <Compile Include="CommandMode\Receiver.cs" />
     <Compile Include="FacadePatterns\Facade.cs" />
     <Compile Include="FacadePatterns\SubSystemOne.cs" />
+    <Compile Include="Observer\ConcreteObserver.cs" />
+    <Compile Include="Observer\ConcreteSubject.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

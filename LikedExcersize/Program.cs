@@ -1,4 +1,6 @@
 ﻿using LikedExcersize.FacadePatterns;
+using LikedExcersize.CommandMode;
+using LikedExcersize.Observer;
 
 namespace LikedExcersize
 {
@@ -6,16 +8,38 @@ namespace LikedExcersize
     {
         static void Main(string[] args)
         {
+            #region 外观模式 为子系统提供一个一致的界面 此模式通过一个高层接口管理 是个这个接口更加容易调用
+            //外观模式
+            //Facade facade = new Facade();
 
-            Facade facade = new Facade();
+            ////为子系统的一组接口提供一致的界面 此模式并通过高级接口管理 使得这个接口更加容易调用
+            //facade.MesthGropOne();
 
-            //为子系统的一组接口提供一致的界面 此模式并通过高级接口管理 使得这个接口更加容易调用
-            facade.MesthGropOne();
+            //facade.MethodTwo();
 
-            facade.MethodTwo();
- 
+            #endregion
 
-           
+            #region 命令模式 ：将一个命令封装为一个对象 使你用不同的请求对客户进行参数化，请求排队或记录请求日志 可支持撤销操作
+            //命令模式
+            Receiver receiver = new Receiver();  //命令接收者
+            ConcreteCommand concreteCommand = new ConcreteCommand(receiver); //具体命令  命令绑定接收者
+            Invoker invoker = new Invoker();    //执行类
+            invoker.SetCommand(concreteCommand);  //设置执行具体命令类
+            invoker.Execute();      //执行
+            #endregion
+
+            #region 观察者模式 ： 是一种一对多的依赖关系 多个观察者对象监听同一个主题对象 这个主题对象改变时 所有监听此主题的都将自动更新
+            //初始化主题
+            ConcreteSubject subject = new ConcreteSubject();
+            //主题添加侦听者
+            subject.Attach(new ConcreteObserver(subject, "1"));
+            subject.Attach(new ConcreteObserver(subject, "2"));
+            subject.Attach(new ConcreteObserver(subject, "3"));
+            subject.SubjectState = "所有观察者更新";
+            subject.Notify();
+            #endregion
+
+            #region 链表
             //链表
             //LinkedList linkedList = new LinkedList();
 
@@ -27,9 +51,13 @@ namespace LikedExcersize
 
             //bool flag1 = linkedList.Contains(2);
             //bool flag2 = linkedList.Delete(1);
+            #endregion
         }
+
     }
 
+
+    #region 链表实现类
     /// <summary>
     /// 链表节点类
     /// </summary>
@@ -263,8 +291,5 @@ namespace LikedExcersize
             return frist == null;
         }
     }
-
-
-
+    #endregion
 }
-
