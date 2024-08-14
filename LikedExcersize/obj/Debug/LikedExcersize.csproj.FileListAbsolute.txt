@@ -1,0 +1,7 @@
+E:\CSharpProject\LikedExcersize\LikedExcersize\bin\Debug\LikedExcersize.exe.config
+E:\CSharpProject\LikedExcersize\LikedExcersize\bin\Debug\LikedExcersize.exe
+E:\CSharpProject\LikedExcersize\LikedExcersize\bin\Debug\LikedExcersize.pdb
+E:\CSharpProject\LikedExcersize\LikedExcersize\obj\Debug\LikedExcersize.csproj.AssemblyReference.cache
+E:\CSharpProject\LikedExcersize\LikedExcersize\obj\Debug\LikedExcersize.csproj.CoreCompileInputs.cache
+E:\CSharpProject\LikedExcersize\LikedExcersize\obj\Debug\LikedExcersize.exe
+E:\CSharpProject\LikedExcersize\LikedExcersize\obj\Debug\LikedExcersize.pdb
