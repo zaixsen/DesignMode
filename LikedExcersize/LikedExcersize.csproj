@@ -49,12 +49,19 @@
     <Compile Include="CommandMode\Receiver.cs" />
     <Compile Include="FacadePatterns\Facade.cs" />
     <Compile Include="FacadePatterns\SubSystemOne.cs" />
+    <Compile Include="Mediator\Colleague.cs" />
+    <Compile Include="Mediator\ConcreteColleagueA.cs" />
+    <Compile Include="Mediator\ConcreteMediator.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
     <Compile Include="Observer\ConcreteObserver.cs" />
     <Compile Include="Observer\ConcreteSubject.cs" />
     <Compile Include="Observer\Observer.cs" />
     <Compile Include="Observer\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\ConcreteProxy.cs" />
+    <Compile Include="Proxy\RealSubject.cs" />
+    <Compile Include="Proxy\Subject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,6 +1,8 @@
 ﻿using LikedExcersize.FacadePatterns;
 using LikedExcersize.CommandMode;
 using LikedExcersize.Observer;
+using LikedExcersize.Mediator;
+using LikedExcersize.Proxy;
 
 namespace LikedExcersize
 {
@@ -8,7 +10,7 @@ namespace LikedExcersize
     {
         static void Main(string[] args)
         {
-            #region 外观模式 为子系统提供一个一致的界面 此模式通过一个高层接口管理 是个这个接口更加容易调用
+            #region 外观模式: 为子系统提供一个一致的界面 此模式通过一个高层接口管理 是个这个接口更加容易调用
             //外观模式
             //Facade facade = new Facade();
 
@@ -21,23 +23,46 @@ namespace LikedExcersize
 
             #region 命令模式 ：将一个命令封装为一个对象 使你用不同的请求对客户进行参数化，请求排队或记录请求日志 可支持撤销操作
             //命令模式
-            Receiver receiver = new Receiver();  //命令接收者
-            ConcreteCommand concreteCommand = new ConcreteCommand(receiver); //具体命令  命令绑定接收者
-            Invoker invoker = new Invoker();    //执行类
-            invoker.SetCommand(concreteCommand);  //设置执行具体命令类
-            invoker.Execute();      //执行
+            //Receiver receiver = new Receiver();  //命令接收者
+            //ConcreteCommand concreteCommand = new ConcreteCommand(receiver); //具体命令  命令绑定接收者
+            //Invoker invoker = new Invoker();    //执行类
+            //invoker.SetCommand(concreteCommand);  //设置执行具体命令类
+            //invoker.Execute();      //执行
             #endregion
 
             #region 观察者模式 ： 是一种一对多的依赖关系 多个观察者对象监听同一个主题对象 这个主题对象改变时 所有监听此主题的都将自动更新
             //初始化主题
-            ConcreteSubject subject = new ConcreteSubject();
-            //主题添加侦听者
-            subject.Attach(new ConcreteObserver(subject, "1"));
-            subject.Attach(new ConcreteObserver(subject, "2"));
-            subject.Attach(new ConcreteObserver(subject, "3"));
-            subject.SubjectState = "所有观察者更新";
-            subject.Notify();
+            //ConcreteSubject subject = new ConcreteSubject();
+            ////主题添加侦听者
+            //subject.Attach(new ConcreteObserver(subject, "1"));
+            //subject.Attach(new ConcreteObserver(subject, "2"));
+            //subject.Attach(new ConcreteObserver(subject, "3"));
+            //subject.SubjectState = "所有观察者更新";
+            //subject.Notify();
             #endregion
+
+            #region 中介者模式 : 用一个中介者来封装一系列的的对象交互。中介者使各对象之间不会显示的相互引用,从而使其耦合松散,而且可以独立地改变它们之间的交互 
+
+            ////具体中介者
+            //ConcreteMediator concreteMediator = new ConcreteMediator();
+            ////所有的同事
+            //ConcreteColleagueA concreteColleagueA = new ConcreteColleagueA(concreteMediator);
+            //ConcreteColleagueB concreteColleagueB = new ConcreteColleagueB(concreteMediator);
+            ////通过中介者绑定两个同事
+            //concreteMediator.ColleagueA = concreteColleagueA;
+            //concreteMediator.ColleagueB = concreteColleagueB;
+            ////解耦 同事 A 不会显示的调用同事 B 只会通过内部的中介者类 调用同事B的方法 并不是 A 直接调用 B 而是通过中介类 调用
+            //concreteColleagueA.Send("concreteColleagueA");
+            //concreteColleagueB.Send("concreteColleagueB");
+
+            #endregion
+
+            #region 代理模式 : 为其他类提供一个代理以控制对这个对象的访问
+            ConcreteProxy proxy = new ConcreteProxy();
+            proxy.Requist();
+
+            #endregion
+
 
             #region 链表
             //链表
@@ -291,5 +316,6 @@ namespace LikedExcersize
             return frist == null;
         }
     }
+
     #endregion
 }
