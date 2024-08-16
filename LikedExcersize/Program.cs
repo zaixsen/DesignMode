@@ -3,6 +3,8 @@ using LikedExcersize.CommandMode;
 using LikedExcersize.Observer;
 using LikedExcersize.Mediator;
 using LikedExcersize.Proxy;
+using LikedExcersize.SimpleFactory;
+using LikedExcersize.StrategyPatterns;
 
 namespace LikedExcersize
 {
@@ -58,11 +60,34 @@ namespace LikedExcersize
             #endregion
 
             #region 代理模式 : 为其他类提供一个代理以控制对这个对象的访问
-            ConcreteProxy proxy = new ConcreteProxy();
-            proxy.Requist();
+            //ConcreteProxy proxy = new ConcreteProxy();
+            //proxy.Requist();
+            #endregion
+
+            #region 简单工厂模式 : 通过不同的参数 返回不同的实例对象
+
+            //Operation operation = Factory.CreateOperation("/");
+            //operation.NumberA = 1;
+            //operation.NumberB = 1;
+            //int result = operation.GetResult();
+            //System.Console.WriteLine(result);
 
             #endregion
 
+            #region 策略模式 : 它定义了一个算法家族 分别封装起来，让他们之间可以相互替换，此模式的算法变化，不会影响使用算法的客户
+
+            Context context;
+
+            context = new Context(new ConcreteStrategyA());
+            context.ContextInterface();
+
+            context = new Context(new ConcreteStrategyB());
+            context.ContextInterface();
+
+             context = new Context(new ConcreteStrategyC());
+            context.ContextInterface();
+
+            #endregion
 
             #region 链表
             //链表

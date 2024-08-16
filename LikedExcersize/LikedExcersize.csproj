@@ -62,6 +62,12 @@
     <Compile Include="Proxy\ConcreteProxy.cs" />
     <Compile Include="Proxy\RealSubject.cs" />
     <Compile Include="Proxy\Subject.cs" />
+    <Compile Include="SimpleFactory\AddOperation.cs" />
+    <Compile Include="SimpleFactory\Operation.cs" />
+    <Compile Include="SimpleFactory\Factory.cs" />
+    <Compile Include="StrategyPatterns\ConcreteStrategyA.cs" />
+    <Compile Include="StrategyPatterns\Context.cs" />
+    <Compile Include="StrategyPatterns\Strategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
