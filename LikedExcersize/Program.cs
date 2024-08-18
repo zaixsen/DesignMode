@@ -5,6 +5,8 @@ using LikedExcersize.Mediator;
 using LikedExcersize.Proxy;
 using LikedExcersize.SimpleFactory;
 using LikedExcersize.StrategyPatterns;
+using LikedExcersize.DecoratorPatterns;
+using LikedExcersize.PrototypePatterns;
 
 namespace LikedExcersize
 {
@@ -76,18 +78,41 @@ namespace LikedExcersize
 
             #region 策略模式 : 它定义了一个算法家族 分别封装起来，让他们之间可以相互替换，此模式的算法变化，不会影响使用算法的客户
 
-            Context context;
+            //Context context;
 
-            context = new Context(new ConcreteStrategyA());
-            context.ContextInterface();
+            //context = new Context(new ConcreteStrategyA());
+            //context.ContextInterface();
 
-            context = new Context(new ConcreteStrategyB());
-            context.ContextInterface();
+            //context = new Context(new ConcreteStrategyB());
+            //context.ContextInterface();
 
-             context = new Context(new ConcreteStrategyC());
-            context.ContextInterface();
+            // context = new Context(new ConcreteStrategyC());
+            //context.ContextInterface();
 
             #endregion
+
+            #region 装饰模式 : 动态的给对象添加一些额外的功能 就添加来说 装饰模式比生成子类更为灵活
+
+            //ConcreteComponent concreteComponent = new ConcreteComponent();
+            //ConcreteDecoratorA concreteDecoratorA = new ConcreteDecoratorA();
+            //ConcreteDecoratorB concreteDecoratorB = new ConcreteDecoratorB();
+
+            //concreteDecoratorA.SetComponent(concreteComponent);      //给装饰A设置具体组件
+            //concreteDecoratorB.SetComponent(concreteDecoratorA);     //给装饰B设置具体装饰 A
+            //concreteDecoratorB.Operation(); //执行装饰B的方法会调用B已经绑定的装饰A
+            ////B-->A-->Component  Operation的方法调用顺序 跟随调用父类方法一直循环调用 类似unity的组件系统 
+            #endregion
+
+            #region 原型模式 ： 通过原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象
+
+            //ConcretePrototype concretePrototype = new ConcretePrototype("I");
+            //ConcretePrototype clone = (ConcretePrototype)concretePrototype.Clone();
+
+            //System.Console.WriteLine("clone : " + clone.Id);
+
+            #endregion  
+
+
 
             #region 链表
             //链表
