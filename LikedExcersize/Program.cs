@@ -7,6 +7,8 @@ using LikedExcersize.SimpleFactory;
 using LikedExcersize.StrategyPatterns;
 using LikedExcersize.DecoratorPatterns;
 using LikedExcersize.PrototypePatterns;
+using LikedExcersize.TemplateMethod;
+using LikedExcersize.BuilderPatterns;
 
 namespace LikedExcersize
 {
@@ -110,9 +112,29 @@ namespace LikedExcersize
 
             //System.Console.WriteLine("clone : " + clone.Id);
 
-            #endregion  
+            #endregion
 
+            #region 模板方法模式 ： 定义一个操作中的算法的骨架，而将这一步骤延迟到子类中，模板方法使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤
+            //AbstractClass abstractClass;
+            //abstractClass = new ConcreteClassA();
+            //abstractClass.TemplateMethod();
+            //abstractClass = new ConcreteClassB();
+            //abstractClass.TemplateMethod();
+            #endregion
 
+            #region 建造者模式 ：将一个复杂对象的构建与它的表示分离，使得同样的构建构成可以不同的表示
+
+            //Director director = new Director();
+            //Builder concreteBuilderA = new ConcreteBuilderA();
+            //Builder concreteBuilderB = new ConcreteBuilderB();
+            //director.Construct(concreteBuilderA);
+            //Product product = concreteBuilderA.GetResult();
+            //product.ShowAllParts();
+            //director.Construct(concreteBuilderB);
+            //product = concreteBuilderB.GetResult();
+            //product.ShowAllParts();
+
+            #endregion
 
             #region 链表
             //链表
@@ -130,6 +152,7 @@ namespace LikedExcersize
         }
 
     }
+
 
 
     #region 链表实现类
