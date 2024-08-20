@@ -4,11 +4,13 @@ using LikedExcersize.Observer;
 using LikedExcersize.Mediator;
 using LikedExcersize.Proxy;
 using LikedExcersize.SimpleFactory;
-using LikedExcersize.StrategyPatterns;
+//using LikedExcersize.StrategyPatterns;
 using LikedExcersize.DecoratorPatterns;
 using LikedExcersize.PrototypePatterns;
 using LikedExcersize.TemplateMethod;
 using LikedExcersize.BuilderPatterns;
+using LikedExcersize.StatePatterns;
+using LikedExcersize.AdapterPatterns;
 
 namespace LikedExcersize
 {
@@ -133,6 +135,25 @@ namespace LikedExcersize
             //director.Construct(concreteBuilderB);
             //product = concreteBuilderB.GetResult();
             //product.ShowAllParts();
+
+            #endregion
+
+            #region 状态模式 : 当一个对象的内在状态改变时允许改变其行为，这个对象看起来像是改变了其类
+
+            //State state = new ConcreteStateA();
+            //Context context = new Context(state);
+
+            //context.Request();
+            //context.Request();
+            //context.Request();
+            //context.Request();
+
+            #endregion
+
+            #region 适配器模式 ：
+
+            Target target = new Adapter();
+            target.Request();
 
             #endregion
 

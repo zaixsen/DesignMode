@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactorPatterns\AbstractFactor.cs" />
     <Compile Include="BuilderPatterns\Builder.cs" />
     <Compile Include="BuilderPatterns\ConcreteBuilderA.cs" />
     <Compile Include="BuilderPatterns\Director.cs" />
@@ -75,6 +76,9 @@
     <Compile Include="SimpleFactory\AddOperation.cs" />
     <Compile Include="SimpleFactory\Operation.cs" />
     <Compile Include="SimpleFactory\Factory.cs" />
+    <Compile Include="StatePatterns\ConcreteStateA.cs" />
+    <Compile Include="StatePatterns\Context.cs" />
+    <Compile Include="StatePatterns\State.cs" />
     <Compile Include="StrategyPatterns\ConcreteStrategyA.cs" />
     <Compile Include="StrategyPatterns\Context.cs" />
     <Compile Include="StrategyPatterns\Strategy.cs" />
