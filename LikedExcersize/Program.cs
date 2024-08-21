@@ -11,6 +11,8 @@ using LikedExcersize.TemplateMethod;
 using LikedExcersize.BuilderPatterns;
 using LikedExcersize.StatePatterns;
 using LikedExcersize.AdapterPatterns;
+using LikedExcersize.MementoPatterns;
+using LikedExcersize.CompositePatterns;
 
 namespace LikedExcersize
 {
@@ -150,10 +152,53 @@ namespace LikedExcersize
 
             #endregion
 
-            #region 适配器模式 ：
+            #region 适配器模式 ：将一个类的接口转换成客户希望另外一个接口 Adapter使得原本由于接口不兼容而不能在一起工作的那些类可以一起工作
 
-            Target target = new Adapter();
-            target.Request();
+            //Target target = new Adapter();
+            //target.Request();
+
+            #endregion
+
+            #region 备忘录模式 ： 在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态。这样以后就可将对象恢复到原先保存的状态
+            ////发起者
+            //Originator originator = new Originator();
+            //originator.State = "On";
+            //originator.Show();
+            ////管理者  通过Memento储存发起者的备份数据 
+            //Caretaker caretaker = new Caretaker();
+            //caretaker.Memento = originator.CreateMemento();
+
+            //originator.State = "Off";
+            //originator.Show();
+
+            //originator.SetMemento(caretaker.Memento);
+            //originator.Show();
+
+            #endregion
+
+            #region 组合模式 ：将对象组合成树形结构以表示 部分-整体 的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性
+
+            //Composite root = new Composite("root");
+            //root.Add(new Leaf("Leaf A"));
+            //root.Add(new Leaf("Leaf B"));
+
+            //Composite comp = new Composite("Composite X");
+            //comp.Add(new Leaf("Leaf XA"));
+            //comp.Add(new Leaf("Leaf XB"));
+            //root.Add(comp);
+
+            //Composite comp2 = new Composite("Composite XY");
+            //comp2.Add(new Leaf("Leaf XYA"));
+            //comp2.Add(new Leaf("Leaf XYB"));
+            //comp.Add(comp2);
+
+            //root.Add(new Leaf("Leaf C"));
+
+            //Leaf leaf =new Leaf("Leaf D");
+            //root.Add(leaf);
+            //root.Remove(leaf);
+
+            //root.Display(1);
 
             #endregion
 

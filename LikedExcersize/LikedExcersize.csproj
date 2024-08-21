@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractFactorPatterns\AbstractFactor.cs" />
+    <Compile Include="AdapterPatterns\Adaptee.cs" />
+    <Compile Include="AdapterPatterns\Adapter.cs" />
+    <Compile Include="AdapterPatterns\Target.cs" />
     <Compile Include="BuilderPatterns\Builder.cs" />
     <Compile Include="BuilderPatterns\ConcreteBuilderA.cs" />
     <Compile Include="BuilderPatterns\Director.cs" />
@@ -52,6 +55,9 @@
     <Compile Include="CommandMode\ConcreteCommand.cs" />
     <Compile Include="CommandMode\Invoker.cs" />
     <Compile Include="CommandMode\Receiver.cs" />
+    <Compile Include="CompositePatterns\Component.cs" />
+    <Compile Include="CompositePatterns\Composite.cs" />
+    <Compile Include="CompositePatterns\Leaf.cs" />
     <Compile Include="DecoratorPatterns\Component.cs" />
     <Compile Include="DecoratorPatterns\ConcreteComponent.cs" />
     <Compile Include="DecoratorPatterns\ConcreteDecoratorA.cs" />
@@ -62,6 +68,9 @@
     <Compile Include="Mediator\ConcreteColleagueA.cs" />
     <Compile Include="Mediator\ConcreteMediator.cs" />
     <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="MementoPatterns\Caretaker.cs" />
+    <Compile Include="MementoPatterns\Memento.cs" />
+    <Compile Include="MementoPatterns\Originator.cs" />
     <Compile Include="Observer\ConcreteObserver.cs" />
     <Compile Include="Observer\ConcreteSubject.cs" />
     <Compile Include="Observer\Observer.cs" />
