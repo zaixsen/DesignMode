@@ -17,7 +17,9 @@ using LikedExcersize.MementoPatterns;
 using LikedExcersize.CompositePatterns;
 using LikedExcersize.IteratorPatterns;
 using System;
-using LikedExcersize.SingletonPatterns;
+using LikedExcersize.BridgePatterns;
+using LikedExcersize.FlyweightPatterns;
+//using LikedExcersize.SingletonPatterns;
 
 #endregion
 
@@ -211,27 +213,57 @@ namespace LikedExcersize
 
             #region 迭代器模式 ：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示
 
-            ConcreteAggregate a = new ConcreteAggregate();
+            //ConcreteAggregate a = new ConcreteAggregate();
 
-            a[0] = "大鸟";
-            a[1] = "小菜";
-            a[2] = "222";
-            a[3] = "333";
-            a[4] = "444";
+            //a[0] = "大鸟";
+            //a[1] = "小菜";
+            //a[2] = "222";
+            //a[3] = "333";
+            //a[4] = "444";
 
-            Iterator iterator = new ConcreteInterator(a);
+            //Iterator iterator = new ConcreteInterator(a);
 
-            object item = iterator.First();
+            //object item = iterator.First();
 
-            while (!iterator.IsDone())
-            {
-                Console.WriteLine("{0}请买票！", iterator.CurrentItem());
-                iterator.Next();
-            }
+            //while (!iterator.IsDone())
+            //{
+            //    Console.WriteLine("{0}请买票！", iterator.CurrentItem());
+            //    iterator.Next();
+            //}
 
             #endregion
 
             #region 单例模式 :提供一个全局访问点 并且只有一个实例
+
+            #endregion
+
+            #region 桥接模式 : 将抽象部分和它的实现部分分离，使它们都可以独立地变化
+
+            //Abstraction abstraction = new Abstraction();
+            //abstraction.SetImplementor(new ConcreteImplementorA());
+            //abstraction.Operation();
+
+            //abstraction.SetImplementor(new ConcreteImplementorB());
+            //abstraction.Operation();
+
+            #endregion
+
+            #region 享元模式 ：运用共享技术有效的支持大量颗粒度的对象
+
+            //int extrinsicstate = 22;
+            //FlyweightFactory f = new FlyweightFactory();
+
+            //Flyweight fx = f.GetFlyweight("X");
+            //fx.Operation(--extrinsicstate);
+
+            //fx = f.GetFlyweight("Y");
+            //fx.Operation(--extrinsicstate);
+
+            //fx = f.GetFlyweight("Z");
+            //fx.Operation(--extrinsicstate);
+
+            //UndharedConcreteFlyweight uf = new UndharedConcreteFlyweight();
+            //uf.Operation(--extrinsicstate);
 
             #endregion
 
@@ -249,6 +281,8 @@ namespace LikedExcersize
             //bool flag2 = linkedList.Delete(1);
             #endregion
         }
+
+
 
     }
 

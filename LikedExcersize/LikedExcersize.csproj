@@ -47,6 +47,11 @@
     <Compile Include="AdapterPatterns\Adaptee.cs" />
     <Compile Include="AdapterPatterns\Adapter.cs" />
     <Compile Include="AdapterPatterns\Target.cs" />
+    <Compile Include="BridgePatterns\Abstraction.cs" />
+    <Compile Include="BridgePatterns\ConcreteImplementorA.cs" />
+    <Compile Include="BridgePatterns\ConcreteImplementorB.cs" />
+    <Compile Include="BridgePatterns\Implementor.cs" />
+    <Compile Include="BridgePatterns\RefinedAbstraction.cs" />
     <Compile Include="BuilderPatterns\Builder.cs" />
     <Compile Include="BuilderPatterns\ConcreteBuilderA.cs" />
     <Compile Include="BuilderPatterns\Director.cs" />
@@ -64,6 +69,10 @@
     <Compile Include="DecoratorPatterns\Decorator.cs" />
     <Compile Include="FacadePatterns\Facade.cs" />
     <Compile Include="FacadePatterns\SubSystemOne.cs" />
+    <Compile Include="FlyweightPatterns\ConcreteFlyweight.cs" />
+    <Compile Include="FlyweightPatterns\Flyweight.cs" />
+    <Compile Include="FlyweightPatterns\FlyweightFactory.cs" />
+    <Compile Include="FlyweightPatterns\UndharedConcreteFlyweight.cs" />
     <Compile Include="IteratorPatterns\Aggregate.cs" />
     <Compile Include="IteratorPatterns\ConcreteAggregate.cs" />
     <Compile Include="IteratorPatterns\ConcreteInterator.cs" />
