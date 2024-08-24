@@ -73,6 +73,9 @@
     <Compile Include="FlyweightPatterns\Flyweight.cs" />
     <Compile Include="FlyweightPatterns\FlyweightFactory.cs" />
     <Compile Include="FlyweightPatterns\UndharedConcreteFlyweight.cs" />
+    <Compile Include="InterpreterPatterns\AbstractExpression.cs" />
+    <Compile Include="InterpreterPatterns\Context.cs" />
+    <Compile Include="InterpreterPatterns\TerminalExpression.cs" />
     <Compile Include="IteratorPatterns\Aggregate.cs" />
     <Compile Include="IteratorPatterns\ConcreteAggregate.cs" />
     <Compile Include="IteratorPatterns\ConcreteInterator.cs" />
@@ -106,6 +109,11 @@
     <Compile Include="StrategyPatterns\Strategy.cs" />
     <Compile Include="TemplateMethod\AbstractClass.cs" />
     <Compile Include="TemplateMethod\ConcreteClassA.cs" />
+    <Compile Include="VisitorPatterns\ConcreteElementA.cs" />
+    <Compile Include="VisitorPatterns\ConcreteVisitorl.cs" />
+    <Compile Include="VisitorPatterns\Element.cs" />
+    <Compile Include="VisitorPatterns\ObjectStructure.cs" />
+    <Compile Include="VisitorPatterns\Visitor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

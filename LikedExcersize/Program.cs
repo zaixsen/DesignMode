@@ -11,7 +11,7 @@ using LikedExcersize.DecoratorPatterns;
 using LikedExcersize.PrototypePatterns;
 using LikedExcersize.TemplateMethod;
 using LikedExcersize.BuilderPatterns;
-using LikedExcersize.StatePatterns;
+//using LikedExcersize.StatePatterns;
 using LikedExcersize.AdapterPatterns;
 using LikedExcersize.MementoPatterns;
 using LikedExcersize.CompositePatterns;
@@ -19,6 +19,9 @@ using LikedExcersize.IteratorPatterns;
 using System;
 using LikedExcersize.BridgePatterns;
 using LikedExcersize.FlyweightPatterns;
+using LikedExcersize.InterpreterPatterns;
+using System.Collections.Generic;
+using LikedExcersize.VisitorPatterns;
 //using LikedExcersize.SingletonPatterns;
 
 #endregion
@@ -264,6 +267,38 @@ namespace LikedExcersize
 
             //UndharedConcreteFlyweight uf = new UndharedConcreteFlyweight();
             //uf.Operation(--extrinsicstate);
+
+            #endregion
+
+            #region 解释器模式 ：给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子
+
+            //Context context = new Context();
+            //IList<AbstractExpression> list = new List<AbstractExpression>();
+
+            //list.Add(new TerminalExpression());
+            //list.Add(new NonterminalExpression());
+            //list.Add(new TerminalExpression());
+            //list.Add(new TerminalExpression());
+
+            //foreach (AbstractExpression expression in list)
+            //{
+            //    expression.InterPret(context);
+            //}
+
+            #endregion
+
+            #region 访问者模式 : 表示一个作用于某对象结构中的各元素的操作。它使你可以在不改变个元素的类的前提下定义作用于这些元素的新操作 
+
+            //ObjectStructure objectStructure = new ObjectStructure();
+            ////添加访问元素
+            //objectStructure.Attach(new ConcreteElementA());
+            //objectStructure.Attach(new ConcreteElementB());
+            ////访问者
+            //ConcreteVisitorl v1 = new ConcreteVisitorl();
+            //ConcreteVisitor2 v2 = new ConcreteVisitor2();
+            
+            //objectStructure.Accept(v1);
+            //objectStructure.Accept(v2);
 
             #endregion
 
